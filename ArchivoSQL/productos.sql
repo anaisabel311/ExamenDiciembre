@@ -1,0 +1,16 @@
+
+
+DROP TABLE IF  EXISTS TB_PRODUCTOS;
+CREATE TABLE TB_PRODUCTOS(
+	id_producto INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nom_producto VARCHAR (40) NOT NULL,
+	tipo_producto ENUM ('ALIMENTACIÓN', 'ELECTRÓNICA', 'ROPA'),
+	precio_producto DECIMAL (6,2) NOT NULL,
+	stock INTEGER (3) NOT NULL
+);	
+
+
+INSERT INTO TB_PRODUCTOS (nom_producto, tipo_producto, precio_producto, stock)
+VALUES ("ORLANDO","ALIMENTACION", 2.5, 40);
+
+SELECT nom_producto FROM TB_PRODUCTOS
